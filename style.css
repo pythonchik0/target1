@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.section-calendar {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+
+.container-calendar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.test {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-test {
+    margin-left: 9px;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+/* Переключатель - коробка вокруг ползунка */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 39px;
+    height: 23px;
+    top: 30px;
+  }
+  
+  /* Скрыть флажок HTML по умолчанию */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Ползунок */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #453f3f;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(14px);
+  }
+  
+  /* Закругленные ползунки */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .pic-calendar {
+    width: 240px;
+    height: 270px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.5);
+  }
+
+ .months {
+  margin-left: 1%;
+  margin-right: 1%;
+ } 
+
+  a {
+    color: black;
+  }
+
+
+  .section-content {
+    display: flex;
+    height: 282px;
+    justify-content: space-between;
+    color:white;
+    background-color: #2a3548;
+  }
+
+  .town-pic {
+    height: 282px;
+  }
+
+.text-of-content {
+    align-content: space-between;
+    margin: 36px;
+}
+
+.strip {
+  display: flex;
+  color: #fff;
+  width: 185.55px;
+  height: 40px;
+  padding: 0 14px 0 39px;
+  background-color: #6741df;
+  position: relative;
+  margin-bottom: 4%;
+  line-height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 40px solid #f83275;
+}
+
+.zagolovok {
+  font-weight: 800;
+  border-right-color: #f73373;
+  box-shadow: 0px 0px #f73373;
+  height: 40px;
+  font-size: 26px;
+  line-height: 42px;
+  letter-spacing: 0.87px;
+}
+
+.strip-black {
+  content: "";
+  width: 23px;
+  background: #000;
+  display: block;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  left: 10px;
+}
+
+p {
+  padding-right: 6%;
+  line-height: 26px;
+}
+
+
+/*Адаптив*/
+
+
+@media (max-width: 1200px) {
+  .container-calendar {
+
+  }
+  .pic-calendar {
+      width: 250px;
+      height: 279px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .text-of-content {
+    margin: 15px;
+}
+
+@media (max-width: 768px) {
+  
+
+  .pic-calendar {
+    width: 185px;
+    height: 214px;
+  }
+
+  .title-test {
+    font-size: 23px;
+  }
+
+  .slider:before {
+    height: 12px;
+    width: 12px;
+    left: 4px;
+  }
+
+  .switch {
+    width: 31px;
+    height: 19px;
+    top: 17px;
+    right: -3%;
+  }
+
+  .months {
+    font-size: 13px;
+  }
+
+  .town-pic {
+    height: 175px;
+  }
+
+  .section-content {
+    height: 175px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 11px;
+    padding-right: 5%;
+    line-height: 19px;
+  }
+
+  .text-of-content {
+    margin: 11px;
+  }
+
+  .strip {
+    width: 109px;
+    height: 28px;
+    line-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 16px solid #f83275;
+  }
+
+  .zagolovok {
+    position: relative;
+    font-size: 19px;
+    letter-spacing: 0.87px;
+    left: -21px;
+    top: -7px;
+  }
+
+  .strip-black {
+    width: 10px;
+    background: #000;
+    display: block;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .pic-calendar {
+    width: 112px;
+    height: 142px;
+  }
+
+  .title-test {
+    font-size: 17px;
+  }
+
+  .slider:before {
+    height: 12px;
+    width: 12px;
+    left: 4px;
+  }
+
+  .switch {
+    width: 31px;
+    height: 19px;
+    top: 17px;
+    right: 3%;
+  }
+
+  .months {
+    font-size: 2.0vw;
+  }
+
+  .town-pic {
+    height: 127px;
+  }
+
+  .section-content {
+    height: 127px;
+  }
+
+  p {
+    font-size: 8px;
+    padding-right: 5%;
+    line-height: 10px;
+  }
+
+  .text-of-content {
+    margin: 11px;
+  }
+
+  .strip {
+    width: 42px;
+    height: 16px;
+    line-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 16px solid #f83275;
+  }
+
+  .zagolovok {
+    position: relative;
+    font-size: 10px;
+    letter-spacing: 0.87px;
+    left: -23px;
+    top: -13px;
+  }
+
+  .strip-black {
+    width: 10px;
+    background: #000;
+    display: block;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 5px;
+  }
+}
+
