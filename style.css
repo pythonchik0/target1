@@ -190,8 +190,8 @@ p {
   
 
   .pic-calendar {
-    width: 185px;
-    height: 214px;
+    width: 150px;
+    height: 180px;
   }
 
   .title-test {
@@ -226,8 +226,8 @@ p {
 
   p {
     font-size: 11px;
-    padding-right: 5%;
-    line-height: 19px;
+    padding-right: 0px;
+    line-height: 15px;
   }
 
   .text-of-content {
@@ -338,4 +338,3 @@ p {
     left: 5px;
   }
 }
-
